@@ -1,0 +1,16 @@
+# yolo task=detect    \
+#     mode=train \
+#     model=yolov8n.pt    \
+#     data=/scratch/qingqu_root/qingqu1/wdli/domain_adaptation/CACTIF/data/manipal_yolo_train/manipal_update2_removal/data.yaml \
+#     epochs=500   \
+#     imgsz=[720,1280]   \
+#     batch=28   \
+#     device=0,1
+yolo task=detect \
+    mode=val \
+    model=/scratch/qingqu_root/qingqu1/wdli/domain_adaptation/CACTIF/runs/detect/train30/weights/best.pt \
+    data=/scratch/qingqu_root/qingqu1/wdli/domain_adaptation/CACTIF/data/manipal_yolo_train/manipal_update2_removal/data.yaml \
+    imgsz=[720,1280] \
+    batch=28 \
+    device=0,1 \
+    split=test

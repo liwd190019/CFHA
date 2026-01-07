@@ -1,0 +1,10 @@
+yolo task=detect    \
+    mode=train \
+    model=yolov8n.pt    \
+    data=/scratch/qingqu_root/qingqu1/wdli/domain_adaptation/CACTIF/data/manipal_yolo_train/manipal_update3_removal/data.yaml \
+    epochs=800   \
+    imgsz=[720,1280]   \
+    batch=28   \
+    device=0,1  
+    # resume=True
+    # model=/scratch/qingqu_root/qingqu1/wdli/domain_adaptation/CACTIF/data/manipal_yolo_train/manipal_update2_removal/runs/train25/weights/last.pt    \
